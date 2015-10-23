@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'bootstrap3',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -111,3 +112,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join(MAIN_DIR, 'static'),)
+STATIC_ROOT = 'staticfiles'
