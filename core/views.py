@@ -18,3 +18,6 @@ class Success(TemplateView):
 
 class About(TemplateView):
     template_name = "contact/about_me_form.html"
+    
+class Resume(TemplateView):
+    template_name = "contact/resume.html"
