@@ -10,7 +10,7 @@ class Home(TemplateView):
 class MessageCreateView(CreateView):
     model = Message
     template_name = "contact/message_form.html"
-    fields = ['subject', 'title', 'name', 'email', 'message']
+    fields = ['subject', 'name', 'email', 'message']
     success_url = reverse_lazy('success')
 
 class Success(TemplateView):
