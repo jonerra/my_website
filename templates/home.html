@@ -1,12 +1,20 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 {% block content %}
-<div class="jumbotron" style="text-align: center;">
-    <h1 style="text-align: center;">Welcome to Jon Erra's Website!</h1>
-    <p style="text-align: center;">Feel free to contact me at anytime!</p>
-    <p style="text-align: center;">
-        <a href="{% url 'message_create' %}" class="btn btn-lg btn-primary" id="about-btn">Message me</a>
-        <a href="{% url 'about' %}" class="btn btn-lg btn-primary">About me</a>
-        <a href="{% url 'resume' %}" class="btn btn-lg btn-primary">My resume</a>
-    </p>
+<div id="wrapper">
+    <section id="main">
+    	<header>
+    		<span class="avatar"><img src="{% static 'images/avatar.jpg' %}" alt="" /></span>
+    		<h1>Jon Erra</h1>
+    		<p>Full Stack Developer</p>
+    	</header>
+    	<footer>
+    		<ul class="icons">
+    			<li><a href="{% url 'resume' %}" class="fa-file-text-o">Resume</a></li>
+    			<li><a href="{% url 'message_create' %}" class="fa-pencil">Message me</a></li>
+    			<li><a href="{% url 'about' %}" class="fa-child">About me</a></li>
+    		</ul>
+    	</footer>
+    </section>
 </div>
 {% endblock %}
