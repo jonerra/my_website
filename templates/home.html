@@ -10,11 +10,16 @@
     	</header>
     	<footer>
     		<ul class="icons">
-    			<li><a href="{% url 'resume' %}" class="fa-file-text-o">Resume</a></li>
-    			<li><a href="{% url 'message_create' %}" class="fa-pencil">Message me</a></li>
-    			<li><a href="{% url 'about' %}" class="fa-child">About me</a></li>
+    			<li><a href="{% url 'resume' %}" class="fa-file-text-o" data-toggle="tooltip" data-placement="top" title="View my resume!">Resume</a></li>
+    			<li><a href="{% url 'message_create' %}" class="fa-pencil" data-toggle="tooltip" data-placement="top" title="Send me a message!">Message me</a></li>
+    			<li><a href="{% url 'about' %}" class="fa-child" data-toggle="tooltip" data-placement="top" title="Read about me!">About me</a></li>
     		</ul>
     	</footer>
     </section>
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip(); 
+        });
+    </script>
 </div>
 {% endblock %}
