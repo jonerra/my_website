@@ -21,3 +21,6 @@ class About(TemplateView):
     
 class Resume(TemplateView):
     template_name = "contact/resume.html"
+    
+class Portfolio(TemplateView):
+    template_name = "portfolio.html"

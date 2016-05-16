@@ -7,4 +7,5 @@ urlpatterns = patterns('',
     url('^success/$', Success.as_view(), name='success'),
     url(r'^about/$', About.as_view(), name='about'),
     url(r'^resume/$', Resume.as_view(), name='resume'),
+    url(r'^portfolio/$', Portfolio.as_view(), name='portfolio'),
 )
